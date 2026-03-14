@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Book Library</title>
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>📚 Digital Book Library</h1>
+    <h2>Reading List</h2>
+
+    <div class="input-section">
+        <input type="text" id="titleInput" placeholder="Book Title">
+        <input type="text" id="authorInput" placeholder="Author Name">
+        <button class="book-btn" onclick="addBook()">📖 Add Book</button>
+    </div>
+
+    <div id="bookList"></div>
+</div>
+
+<script src="book.js"></script>
+</body>
+</html>

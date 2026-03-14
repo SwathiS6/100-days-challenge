@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="text-items">Item 1</p>
+     <p class="text-items">Item 2</p>
+     <p class="text-items">Item 3</p> 
+     
+     
+     <ul>
+        <li>list 1</li>
+        <li>list 2</li>
+        <li>list 3</li>
+        <li>list 4</li>
+        <li>list 5</li>
+     </ul>
+
+
+    <div id="header"></div>
+    <script>
+        const header= document.getElementById("header");
+        header .textContent="HelloWorld";
+        header.style.backgroundColor="lightgreen";
+
+
+
+        const text=document.getElementsByClassName("text-items");
+        for(let i=0; i<text.length; i++){
+            text[i].style.color="red";
+        }
+
+
+        const list=document.getElementsByTagName("li");
+        list[2] .textContent="I am the choson one";
+        list[3].style.fontSize="20PX";
+ </script>
+ </body>
+ </html>

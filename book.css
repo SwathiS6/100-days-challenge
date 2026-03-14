@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,
+        #ffd6e0,
+        #ffe5b4,
+        #e0f7fa,
+        #e6e6fa,
+        #d4fc79);
+    background-size: 300% 300%;
+    animation: rainbowMove 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+@keyframes rainbowMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.container {
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 20px;
+    width: 600px;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+}
+
+input {
+    padding: 10px;
+    margin: 8px;
+    border-radius: 8px;
+    border: none;
+    width: 40%;
+}
+
+.book-btn {
+    background: #6c5ce7;
+    color: white;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 6px 25px 25px 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.book-btn:hover {
+    background: #4834d4;
+}
+
+.book-card {
+    background: white;
+    margin-top: 20px;
+    padding: 18px;
+    border-left: 8px solid #6c5ce7;
+    border-radius: 6px 25px 25px 6px;
+    box-shadow: 5px 5px 18px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.action-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-top: 12px;
+}
+
+.status {
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    background: #ff7675;
+    color: white;
+    text-align: center;
+    flex: 1; 
+}
+
+.read {
+    background: #00b894;
+}
+
+.toggle-btn {
+    background: #fdcb6e;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 15px;
+    margin: 2px;
+}
+
+.delete-btn {
+    background: #d63031;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}

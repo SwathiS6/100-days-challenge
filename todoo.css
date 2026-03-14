@@ -1,0 +1,67 @@
+/* style.css */
+body, html { 
+    margin: 0; 
+    padding: 0; 
+    height: 100%;
+    background: url(https://t3.ftcdn.net/jpg/04/69/92/28/360_F_469922866_pBbbdLHH28TKrTNGfuC5ENH36Mbgiwzh.jpg);
+    overflow: hidden;
+    /* background-color: #eb9edb; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background: #470e3c; */
+    font-family: 'Poppins', sans-serif;}
+
+#starCanvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+
+.todo-card {
+    background: rgba(130, 7, 187, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(190, 169, 204, 0.2);
+    padding: 2rem;
+    border-radius: 30px;
+    width: 380px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 25px 45px rgba(207, 71, 219, 0.5);
+    color: rgb(129, 6, 102);
+    background:transparent ;
+}
+h1{
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#taskInput{
+    padding: 5px;
+    height: 17px;
+    width: 73%;
+}
+/* Unique OK Button with Rainbow Glow */
+#okBtn {
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background-size: 400%;
+    border: none; color: rgb(29, 27, 27); padding: 10px 30px;
+    border-radius: 50px; cursor:pointer; font-weight: bold;
+    animation: rainbowShift 20s linear infinite;
+    transition: 0.1s;
+    /* width: 50%; */
+}
+
+#okBtn:hover { transform: scale(1.1); box-shadow: 0 0 20px rgba(240, 136, 136, 0.6); }
+
+@keyframes rainbowShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.task-item {
+    background: rgb(227, 145, 238);
+    margin-top: 15px; padding: 12px;
+    border-radius: 15px; display: flex;
+    color: #470e3c;
+    justify-content: space-between; align-items: center;
+}
+
+.complete-btn { background: #00ff88; border: none; border-radius: 50%; padding: 5px 10px; cursor: pointer; }
+.delete-btn { background: #ff3333; border: none; border-radius: 50%; padding: 5px 10px; cursor: pointer; margin-left: 5px; }
