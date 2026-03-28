@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=V, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My To Do List</h1>
+
+
+
+<ul>
+  <li>Urgent Task</li>
+  <li> fast </li>
+  <li> late </li>
+</ul>
+
+
+
+
+<div id="container">
+  <p>Item 1</p>
+  <p>Item 2</p>
+</div>
+<button id="btn">Remove Last Item</button>
+
+
+
+
+<div>
+  <span>New</span>
+  <p> paragraph text</p>
+</div>
+
+
+
+
+<ul id="listA">
+  <li>item to Move</li>
+  <li>stay Here</li>
+</ul>
+
+<ul id="listB">
+  <li>existing Item</li>
+</ul>
+
+
+
+</body>
+<script>
+    const head = document.createElement("h1");
+    heading.textContent = "My To Do List";
+    document.body.appendChild(head);
+
+    const list = document.querySelector("ul");
+    const newTask = document.createElement("li");
+    newTask.textContent = "Urgent Task";
+    list.insertBefore(newTask, list.firstChild);
+
+    const container = document.getElementById("container");
+    const button = document.getElementById("btn");
+
+    button.addEventListener("click", () => {
+    if (container.lastElementChild) {
+      container.removeChild(container.lastElementChild);
+    }
+  });
+
+   const box = document.querySelector("div");
+   const paragraph = document.querySelector("p");
+   const span = document.createElement("span");
+
+   span.textContent = "New";
+   box.insertBefore(span, paragraph);
+
+
+   const listA = document.getElementById('listA');
+   const listB = document.getElementById('listB');
+   const item = listA.firstElementChild;
+
+ 
+   const movedItem = listA.removeChild(item);
+   listB.append(movedItem);
+
+</script>
+</html>
