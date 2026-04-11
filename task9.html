@@ -4,8 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        #treasure-chest{
+           width: 450px;
+           height: 450px;
+            background-color: black;
+            border: 5px solid brown; 
+            cursor: pointer;
+            /* width: 450px;
+            height: 450px; */
+         }
+         p{
+            display: flex;
+            
+            justify-content: center;
+            align-items: center;
+         }
+         body{
+            border-color: black;
+            background-color: blanchedalmond;
+         }
+        
+    </style>
 </head>
 <body>
-    <p id="treasure-chest"> treasure</p>
+
+    <div id="treasure-chest">
+        <p>📦</p>
+    </div>
+
+    <script>
+        const chest = document.getElementById("treasure-chest");
+        chest.onmouseenter = function(e) {
+            chest.querySelector('p').textContent = "💎"; 
+            e.currentTarget.style.backgroundColor = "gold";
+        };
+
+        chest.onmouseleave = function(e) {
+            chest.querySelector('p').textContent = "📦";
+            e.currentTarget.style.backgroundColor = "black";
+        };
+    </script>
+
 </body>
 </html>
